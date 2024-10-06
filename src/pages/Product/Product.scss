@@ -1,0 +1,146 @@
+.product-container {
+    display: flex;
+    margin : 40px;
+
+    img {
+        height: 700px;
+        width : 600px;
+        object-fit: cover;
+    }
+
+    .info {
+        margin-left   : 40px;
+        display       : flex;
+        flex-direction: column;
+        gap           : 20px;
+
+        .title {
+            font-size  : 40px;
+            font-weight: 200;
+        }
+
+        .desc {}
+
+        .price {
+            font-size: 45px;
+        }
+
+        .filter-container {
+            display     : flex;
+            gap         : 50px;
+            $defaultSize: 20px;
+
+            @mixin border-radius($radius) {
+                border-radius: $radius;
+            }
+
+            @mixin background-color($color) {
+                background-color: $color;
+            }
+
+            .filter {
+                display: flex;
+                gap    : 10px;
+
+                .filter-title {
+                    font-size: 20px;
+                }
+
+                .FilterColor {
+                    width  : $defaultSize;
+                    height : $defaultSize;
+                    margin : 0px 5px;
+                    cursor : pointer;
+                    display: inline-block;
+
+                    @include border-radius(50%);
+
+                    &[color="red"] {
+                        background-color: red;
+                    }
+
+                    &[color="green"] {
+                        background-color: green;
+                    }
+
+                    &[color="yellow"] {
+                        background-color: yellow;
+                    }
+                    &[color="white"] {
+                        background-color: whitesmoke;
+                    }
+                    &[color="black"] {
+                        background-color: black;
+                    }
+                    &[color="blue"] {
+                        background-color: blue;
+                    }
+                }
+
+                // .filter-color {
+                //     display: flex;
+                //     gap    : 10px;
+
+                //     .filter-color-black {
+                //         width           : 20px;
+                //         height          : 20px;
+                //         border-radius   : 50%;
+                //         background-color: black;
+                //     }
+
+                //     .filter-color-blue {
+                //         width           : 20px;
+                //         height          : 20px;
+                //         border-radius   : 50%;
+                //         background-color: blue;
+                //     }
+
+                //     .filter-color-gray {
+                //         width           : 20px;
+                //         height          : 20px;
+                //         border-radius   : 50%;
+                //         background-color: rgb(84, 80, 80);
+                //     }
+                // }
+
+                .filter-size {
+                    padding: 3px 10px;
+                }
+            }
+        }
+
+        .addContainer {
+            display    : flex;
+            align-items: center;
+            gap        : 150px;
+
+            .amount {
+                display    : flex;
+                gap        : 10px;
+                align-items: center;
+
+                .cout {
+                    font-size: 16px;
+                }
+
+                .number {
+                    font-weight    : 300;
+                    width          : 20px;
+                    height         : 20px;
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: center;
+                    border         : 2px solid rgb(133, 133, 231);
+                    border-radius  : 6px;
+                }
+            }
+
+            button {
+                cursor: pointer;
+                background-color: white;
+                padding         : 10px;
+                border          : 2px solid rgb(162, 162, 239);
+            }
+        }
+    }
+}

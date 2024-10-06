@@ -1,0 +1,13 @@
+.prod{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0px;
+    .products{
+        padding: 20px;
+        display: flex;
+        //flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,14 @@
+.checkout-product-right{
+    border-bottom:1px solid #9e9c9c ;
+    padding: 5px;
+    .sum-price-checkout{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .price-order{
+            font-size: 28px;
+            color: red;
+            font-weight: bold;
+        }
+    }
+}

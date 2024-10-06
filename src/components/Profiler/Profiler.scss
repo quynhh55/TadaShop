@@ -1,0 +1,92 @@
+.profile-wrapper{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .profile-heading{
+        margin: 5px 0px;
+        border-bottom:1px solid rgb(198, 193, 193)  ;
+        padding: 10px;
+        .profile-title{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    .profile-content{
+        display: flex;
+        .profile-content-left{
+            flex: 3;
+            border-right: 1px solid rgb(198, 193, 193) ;
+            .profile-content-left-item {
+                display: flex;
+                padding-bottom: 30px;
+                align-items: center;
+
+                .title {
+                    flex: 3;
+                    text-align: right;
+                    color: themed("textColorSoft");
+                }
+
+                .item-value {
+                    padding-left: 20px;
+                    flex: 7;
+
+                    input {
+                        width: 90%;
+                        padding: 8px;
+                        outline: 0;
+                        font-size: 16px;
+                        border: 1px solid themed("border");
+                    }
+                }
+            }
+        }
+        .profile-content-right{
+            flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .avatar-user {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin-bottom: 20px;
+                } 
+                input {
+                    display: none;
+                }
+                .btn-select-img {
+                    cursor: pointer;
+                    padding: 10px 15px;
+                    border: 1px solid grey;
+                    border-radius: 4px;
+                }
+        }
+        
+    }
+    .profile-bottom{
+        display: flex;
+        justify-content: center;
+        .btn-save {
+            color: white;
+            background-color: rgb(241, 130, 130);
+            padding: 10px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid rgb(198, 193, 193);
+            
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+.title{
+    color: gray;
+}
